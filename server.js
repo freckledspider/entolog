@@ -9,6 +9,7 @@ const mongoose = require("mongoose")
 const app = express()
 
 // establish mongo connection
+mongoose.set('strictQuery', true)
 mongoose.connect(process.env.DATABASE_URL)
 
 // mongoose connection events
