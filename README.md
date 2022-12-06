@@ -15,6 +15,13 @@
 - HTML5
 - CSS 3
 - Javascript
+- Express JS
+- jQuery
+- EJS
+- Node
+- Mongo DB
+- Mockflow
+- Trello
 
 
 ## Features
@@ -26,7 +33,7 @@
 
 
 ## Screenshots
-![Screenshot of entolog](./img/screenshot.png)
+<!-- ![Screenshot of entolog](./img/screenshot.png) -->
 
 
 ## Setup
