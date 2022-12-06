@@ -1,6 +1,7 @@
 # Entolog
 > Entolog is an application that allows you to keep track of insects you have pinned in your physical collection.
-> Live demo [_here_](https://).
+> Live demo [_here_](https://entolog.onrender.com).
+> Trello board [_here_](https://trello.com/b/KbaJ0NX4/project-2-brianne-camesi).
 
 
 ## General Information
