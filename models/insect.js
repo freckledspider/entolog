@@ -13,7 +13,7 @@ const insectSchema = new  Schema({
     species: String,
     lifeStage: String,
     location: String,
-    date: { type: Date, body: String },
+    date: String,
     notes: String
 })
 
