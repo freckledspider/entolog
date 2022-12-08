@@ -27,7 +27,7 @@ app.use(methodOverride("_method"))
 
 // routes and routers
 app.get("/", (req, res) => {
-    res.send("<h1>Server is working</h1>")
+    res.render("index.ejs")
 })
 
 // start the server (listener)
