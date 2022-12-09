@@ -38,5 +38,12 @@ router.get('/:id/edit', (req, res) => {
     })
 })
 
+// update insect
+router.put('/:id', (req, res) => {
+    Insect.findByIdAndUpdate(req.params.id, req.body, {new: true},(updatedInsect) => {
+        res.redirect(`/insects/${req.params.id}`)  
+    })
+})
+
 // export
 module.exports = router
