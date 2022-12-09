@@ -29,6 +29,14 @@ router.get('/:id', async (req, res)=>{
     })
 })
 
+// edit insects by id
+router.get('/:id/edit', (req, res) => {
+    const id = req.params.id
+    Insect.findById(id)
+    .then((insect)=> {
+        res.render('insects/edit.ejs', {insect})
+    })
+})
 
 // export
 module.exports = router

@@ -5,7 +5,19 @@
 <body>
     <%- include("../partials/header.ejs") %> 
     <main>
-        
+
+        <form action="/insects/<%= insect.id %>?_method=PUT" method="post" >
+Edit <%= insect.species %><br>
+
+                    Species: <input 
+                        type="text"
+                        name="species"
+                        value="<%= insect.species %>"
+                        placeholder="Species name"
+                    />
+
+            <input type="submit" value="Update <%= insect.species %>" />
+        </form> 
     </main>
 
 </body>
