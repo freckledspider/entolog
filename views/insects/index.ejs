@@ -6,7 +6,8 @@
     <%- include("../partials/header.ejs") %> 
     <main>
         <% for (insect of insects) { %>
-            <%= insect.species %>
+            <img height="100px" src="<%= insect.image %>"><br>
+            <a href="/insects/<%= insect._id %>"><i><%=insect.genus %> <%= insect.species %></i></a><br><br>
         <% } %> 
     </main>
 
