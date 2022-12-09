@@ -2,12 +2,14 @@
 const express = require('express') 
 const Insect = require('../models/insect')
 
+
 // create router
 const router = express.Router()
 
 
 
 // routes
+
 
 // on /insects, list all insects in database
 router.get('/', (req, res) => {
@@ -19,6 +21,19 @@ router.get('/', (req, res) => {
     })
 })
 
+
+// new insect
+router.get('/new', async (req, res) => {
+    res.render('insects/new.ejs')
+})
+
+router.post('/', (req, res) => {
+    Insect.create(req.body, (newInsect) =>{
+        res.redirect('/insects')
+    })
+} )
+
+
 // on insects/show.ejs, give more details for specific insect in database
 router.get('/:id', async (req, res)=>{
     // find the insect by id on mongoDB
@@ -29,6 +44,7 @@ router.get('/:id', async (req, res)=>{
     })
 })
 
+
 // edit insects by id
 router.get('/:id/edit', (req, res) => {
     const id = req.params.id
@@ -37,6 +53,7 @@ router.get('/:id/edit', (req, res) => {
         res.render('insects/edit.ejs', {insect})
     })
 })
+
 
 // update insect
 router.put('/:id', (req, res) => {

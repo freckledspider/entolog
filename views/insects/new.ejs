@@ -5,7 +5,24 @@
 <body>
     <%- include("../partials/header.ejs") %> 
     <main>
-        
+        <h2>Add a new insect</h2>
+
+        <form action="/insects" method="POST">
+
+        Image URL: (Imgur URL) <input type="text" name="image" placeholder="Image url" /><br><br>
+
+        Family: <input type="text" name="family" placeholder="Family" /><br>
+        Genus: <input type="text" name="genus" placeholder="Genus" /><br>
+        Species: <input type="text" name="species" placeholder="Sp." /><br><br>
+
+        Lifestage: <input type="text" name="lifestage" placeholder="Lifestage" /><br>
+        Collected Location: <input type="text" name="location" placeholder="Location/Coordinates" /><br>
+        Collection Date: <input type="text" name="date" placeholder="Date" /><br><br>
+
+        Notes: <input type="text" name="notes"  placeholder="Notes" /><br><br>
+
+        <input type="submit" value="Add New Insect" />
+        </form>
     </main>
 
 </body>

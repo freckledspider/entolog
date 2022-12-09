@@ -5,6 +5,7 @@
 <body>
     <%- include("../partials/header.ejs") %> 
     <main>
+        <a href="/insects/new"><button>Add Insect</button></a><br><br>
         <% for (insect of insects) { %>
             <img height="100px" src="<%= insect.image %>"><br>
             <a href="/insects/<%= insect._id %>"><i><%=insect.genus %> <%= insect.species %></i></a><br><br>
