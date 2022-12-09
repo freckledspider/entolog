@@ -45,5 +45,13 @@ router.put('/:id', (req, res) => {
     })
 })
 
+// delete insect
+router.delete('/:id', async (req, res) => {
+    Insect.findByIdAndDelete(req.params.id, (deletedInsect) => {
+        res.redirect('/insects')
+    })
+})
+
+
 // export
 module.exports = router

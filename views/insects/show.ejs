@@ -20,6 +20,10 @@
         <a href="/insects/<%= insect._id %>/edit">
             <button>Edit</button>
          </a>
+         <br>
+         <form action="/insects/<%= insect._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete" />
+        </form>
     </main>
 
 </body>
