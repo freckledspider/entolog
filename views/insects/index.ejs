@@ -5,7 +5,9 @@
 <body>
     <%- include("../partials/header.ejs") %> 
     <main>
-        
+        <% for (insect of insects) { %>
+            <%= insect.species %>
+        <% } %> 
     </main>
 
 </body>

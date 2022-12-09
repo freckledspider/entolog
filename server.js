@@ -4,6 +4,7 @@ const express = require("express")
 const morgan = require("morgan")
 const methodOverride = require("method-override")
 const mongoose = require("mongoose")
+const InsectRouter = require('./controllers/insect')
 
 // create express application
 const app = express()
@@ -24,6 +25,7 @@ app.use(express.static("public"))
 app.use("/static", express.static ("public"))
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride("_method"))
+app.use('/insects', InsectRouter)
 
 // routes and routers
 app.get("/", (req, res) => {
