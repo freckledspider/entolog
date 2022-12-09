@@ -24,8 +24,8 @@ router.get('/:id', async (req, res)=>{
     // find the insect by id on mongoDB
     Insect.findById(req.params.id)
     // then render on page
-    .then((insects)=> {
-        res.render('insects/show.ejs', {insects})
+    .then((insect)=> {
+        res.render('insects/show.ejs', {insect})
     })
 })
 
