@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&family=Roboto:wght@300&display=swap');
 
 body {
-    background-image: url("insectsillustration.jpg");
+    background-color: #ebecdb;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -46,3 +46,18 @@ button:hover {
     cursor: pointer;
     background-color: #41382f;
 }
+
+.container {
+    height: auto;
+    overflow: hidden;
+  }
+  .left {
+    width: 20em;
+    float: left;
+    background-image: url("insectsillustration.jpg");
+  }
+  .right {
+    width: auto;
+    overflow: hidden;
+    text-align: center;
+  }
