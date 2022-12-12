@@ -9,13 +9,54 @@
         <form action="/insects/<%= insect.id %>?_method=PUT" method="post" >
 <h2>Edit <%= insect.species %></h2><br>
 
+                    Image URL: <input 
+                        type="text"
+                        name="image"
+                        value="<%= insect.image %>"
+                        placeholder="Image URL"
+                    /><br>
+                    Family: <input 
+                        type="text"
+                        name="family"
+                        value="<%= insect.family %>"
+                        placeholder="Family"
+                    /><br>
+                    Genus: <input 
+                        type="text"
+                        name="genus"
+                        value="<%= insect.genus %>"
+                        placeholder="Genus"
+                    /><br>
                     Species: <input 
                         type="text"
                         name="species"
                         value="<%= insect.species %>"
-                        placeholder="Species name"
-                    />
-
+                        placeholder="Species"
+                    /><br>
+                    Life Stage: <input 
+                        type="text"
+                        name="lifeStage"
+                        value="<%= insect.lifeStage %>"
+                        placeholder="Life Stage"
+                    /><br>
+                      Collected Location: <input 
+                      type="text"
+                      name="location"
+                      value="<%= insect.location %>"
+                      placeholder="Location"
+                  /><br>
+                  Collected Date: <input 
+                  type="date"
+                  name="date"
+                  value="<%= insect.date %>"
+                  placeholder="Date"
+              /><br>
+              Notes: <textarea 
+              type="text"
+              name="notes"
+              value="<%= insect.notes %>"
+              placeholder="Notes"
+              rows="3" cols="30"></textarea><br>
             <input type="submit" value="Update <%= insect.species %>" />
         </form> 
     </main>

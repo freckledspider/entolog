@@ -17,9 +17,14 @@
 
         Lifestage: <input type="text" name="lifestage" placeholder="Lifestage" /><br>
         Collected Location: <input type="text" name="location" placeholder="Location/Coordinates" /><br>
-        Collection Date: <input type="text" name="date" placeholder="Date" /><br><br>
+        Collection Date: <input type="date" name="date" placeholder="Date" /><br><br>
 
-        Notes: <input type="text" name="notes"  placeholder="Notes" /><br><br>
+        Notes: <textarea 
+        type="text"
+        name="notes"
+        value="<%= insect.notes %>"
+        placeholder="Notes"
+        rows="3" cols="30"></textarea><br><br>
 
         <input type="submit" value="Add New Insect" />
         </form>
