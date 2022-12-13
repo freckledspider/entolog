@@ -202,3 +202,16 @@ input {
     margin: 5px;
     color: #ebecdb;
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ebecdb;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #ebecdb;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #ebecdb;
+  }
