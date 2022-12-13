@@ -7,31 +7,32 @@
         body {
             overflow: auto;
             text-align: center;
+            margin: 20px;
         }
         </style>
-    <div class="show">
     <%- include("../partials/header.ejs") %> 
     <main>
         <h4><%= insect.genus %> <%= insect.species %></h4>
-        <img height="400px" src="<%= insect.image %>"><br><br>
-        Family: <%= insect.family %><br>
-        Genus: <%= insect.genus %><br>
-        Species: <%= insect.species %><br><br>
+        <img class="showimage" src="<%= insect.image %>"><br><br>
+        <b>Family:</b> <%= insect.family %><br>
+        <b>Genus:</b> <%= insect.genus %><br>
+        <b>Species:</b> <%= insect.species %><br><br>
 
-        Life stage: <%= insect.lifeStage %><br>
-        Collected location: <%= insect.location %><br>
-        Collection date: <%= insect.date %><br><br>
+        <b>Life stage:</b> <%= insect.lifeStage %><br>
+        <b>Collected location:</b> <%= insect.location %><br>
+        <b>Collection date:</b> <%= insect.date %><br><br>
 
-        Notes: <%= insect.notes %><br><br>
-
+        <b>Notes:</b> <%= insect.notes %><br><br>
+        <div class="buttonsdiv">
         <a href="/insects/<%= insect._id %>/edit">
             <button>Edit</button>
-         </a>
-         <br>
-         <form action="/insects/<%= insect._id %>?_method=DELETE" method="POST">
-            <input onclick="return deletePrompt()" type="submit" value="Delete" />
+         </a> <form action="/insects/<%= insect._id %>?_method=DELETE" method="POST">
+            <input class="inputbutton" onclick="return deletePrompt()" type="submit" value="Delete" />
         </form>
-        <p id="msg"></p>
+        <a href="/insects/">
+            <button>Back</button>
+        </a>
+    </div>
     </main>
 </body>
 </body>

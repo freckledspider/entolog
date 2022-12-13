@@ -63,7 +63,7 @@ h4 {
     margin: 0px;
 }
 
-button {
+button, .inputbutton {
     font-family: 'Roboto', sans-serif;
     color: #ebecdb;
     background-color: #ad8142;
@@ -75,7 +75,7 @@ button {
     border-radius: 1em;
 }
 
-button:hover {
+button:hover, .inputbutton:hover {
     cursor: pointer;
     background-color: #41382f;
 }
@@ -174,4 +174,23 @@ ul {
 
 .show {
     padding: 20px;
+}
+
+main {
+    width: 800px;
+    margin: auto;
+    padding: 10px;
+    background-color: #d8d9c8;
+    border: 5px solid #d8d9c8;
+    border-radius: 1em;
+}
+
+.showimage {
+    width: 400px;
+    border: 10px solid #7b6b54;
+    border-radius: 1em;
+}
+
+.buttonsdiv {
+    display: inline-flex;
 }
