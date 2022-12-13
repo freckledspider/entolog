@@ -3,13 +3,20 @@
     <%- include("../partials/head.ejs") %> 
 
 <body>
+    <style>
+        body {
+            overflow: auto;
+            text-align: center;
+            margin: 20px;
+        }
+        </style>
     <%- include("../partials/header.ejs") %> 
     <main>
 
         <form action="/insects/<%= insect.id %>?_method=PUT" method="post" >
-<h2>Edit <%= insect.species %></h2><br>
+<h4>Edit <%= insect.species %></h4><br>
 
-                    Image URL: <input 
+                    <b>Image URL: <input 
                         type="text"
                         name="image"
                         value="<%= insect.image %>"
@@ -51,14 +58,19 @@
                   value="<%= insect.date %>"
                   placeholder="Date"
               /><br>
-              Notes: <textarea 
+              Notes: <input 
               type="text"
               name="notes"
               value="<%= insect.notes %>"
               placeholder="Notes"
-              rows="3" cols="30"></textarea><br>
-            <input type="submit" value="Update <%= insect.species %>" />
+          /><br><br>
+          <div class="buttonsdiv">
+            <input class="inputbutton" type="submit" value="Update <%= insect.species %>" />
         </form> 
+        <form>
+            <input class="inputbutton" type="button" value="Back" onclick="history.back()">
+           </form>
+        </div>
     </main>
 
 </body>

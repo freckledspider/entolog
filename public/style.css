@@ -194,3 +194,11 @@ main {
 .buttonsdiv {
     display: inline-flex;
 }
+
+input {
+    background-color: #7b6b54;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    color: #ebecdb;
+}
