@@ -28,12 +28,14 @@ app.use("/static", express.static ("public"))
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride("_method"))
 app.use('/insects', InsectRouter)
-app.use(session({
-    secret: process.env.SECRET,
-    resave: false,
-    saveUninitialized: true,
-  }));
-
+app.use(
+    session({
+        secret: process.env.SECRET,
+        store: MongoStore.create({ mongoUrl: process.env.DATABASE_URL }),
+        saveUninitialized: true,
+        resave: false,
+    })
+);
 // routes and routers
 app.get("/", (req, res) => {
     res.render("index.ejs")
