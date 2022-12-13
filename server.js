@@ -6,7 +6,6 @@ const methodOverride = require("method-override")
 const mongoose = require("mongoose")
 const InsectRouter = require('./controllers/insect')
 const session = require("express-session")
-const MongoStore = require("connect-mongo")
 
 // create express application
 const app = express()
@@ -31,7 +30,6 @@ app.use('/insects', InsectRouter)
 app.use(
     session({
         secret: process.env.SECRET,
-        store: MongoStore.create({ mongoUrl: process.env.DATABASE_URL }),
         saveUninitialized: true,
         resave: false,
     })
