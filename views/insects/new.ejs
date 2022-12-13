@@ -15,19 +15,21 @@
     <main>
         <h4>Add a new insect</h4>
 
+        Enter data in each field and/or leave in default prefilled data.
+
         <form action="/insects" method="POST">
 
-        <b>Image URL: (Imgur URL) <input type="text" name="image" placeholder="Image url" /><br>
+        <b>Image URL: (Imgur URL) <input type="text" name="image" value="https://i.imgur.com/EAcJy5a.png" /><br>
 
-        Family: <input type="text" name="family" placeholder="Family" /><br>
-        Genus: <input type="text" name="genus" placeholder="Genus" /><br>
-        Species: <input type="text" name="species" placeholder="Sp." /><br>
+        Family: <input type="text" name="family" value="Unidentified Family" /><br>
+        Genus: <input type="text" name="genus" value="Unidentified Genus" /><br>
+        Species: <input type="text" name="species" value="Unidentified Sp." /><br>
 
-        Lifestage: <input type="text" name="lifestage" placeholder="Lifestage" /><br>
-        Collected Location: <input type="text" name="location" placeholder="Location/Coordinates" /><br>
+        Lifestage: <input type="text" name="lifestage" value="Lifestage TBD" /><br>
+        Collected Location: <input type="text" name="location" value="Location TBD" /><br>
         Collection Date: <input type="date" name="date" placeholder="Date" /><br>
 
-        Notes: </b><input type="text" name="notes" placeholder="Notes" />
+        Notes: </b><input type="text" name="notes" value="" />
         <br><br>
         <div class="buttonsdiv">
         <input class="inputbutton" type="submit" value="Add New Insect" />
