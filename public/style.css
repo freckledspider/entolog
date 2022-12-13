@@ -6,6 +6,11 @@ body {
     background-size: 100%;
     background-position: center;
     background-attachment: fixed;
+    margin: 0;
+    color: #41382f;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1em;
+    overflow: hidden;
 }
 
 .index {
@@ -30,6 +35,34 @@ h1 {
     margin: 0px;
 }
 
+h2 {
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #ebecdb;
+    letter-spacing: -0.13em;
+    padding: 0px;
+    margin: 0px;
+}
+
+h3 {
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 2em;
+    color: #ebecdb;
+    letter-spacing: 0em;
+    padding: 0px;
+    margin: 0px;
+}
+
+h4 {
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 2em;
+    color: #ad8142;
+    letter-spacing: 0em;
+    padding: 0px;
+    margin: 0px;
+}
+
 button {
     font-family: 'Roboto', sans-serif;
     color: #ebecdb;
@@ -47,23 +80,98 @@ button:hover {
     background-color: #41382f;
 }
 
+.editbutton {
+    font-family: 'Roboto', sans-serif;
+    color: #ebecdb;
+    background-color: #ad8142;
+    border: none;
+    padding: 15px;
+    font-size: 1em;
+    margin: 10px;
+    transition-duration: 0.4s;
+    border-radius: 1em;
+}
+
+.editbutton:hover {
+    cursor: pointer;
+    background-color: #41382f;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  li a {
+    font-family: 'Roboto', sans-serif;
+    color: #ebecdb;
+    background-color: #ad8142;
+    border: none;
+    padding: 25px;
+    font-size: 1.5em;
+    margin: 10px;
+    transition-duration: 0.4s;
+    border-radius: 1em;
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+
+  li a:hover {
+    cursor: pointer;
+    background-color: #41382f;
+  }
+
 .container {
     height: auto;
-    overflow: hidden;
   }
+
   .left {
-    width: 20em;
+    width: 300px;
     height: 100vh;
     float: left;
     margin: 0;
-    padding: 0;
-    background-image: url("insectsillustration.jpg");
+    padding: 20px;
+    background-image: url("insectsidebackground.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: top left;
+    background-attachment: fixed;
+    text-align: center;
+    overflow: hidden;
   }
   .right {
     width: auto;
-    overflow: hidden;
     text-align: center;
     height: 100vh;
     margin: 0;
     padding: 0;
+    overflow: hidden;
   }
+
+.insects {
+    margin: 20px;
+    padding: 50px;
+    height: 200px;
+    width: 200px;
+    display: block;
+    float: left;
+    background-color: #d8d9c8;
+    border: 5px solid #d8d9c8;
+    border-radius: 1em;
+}
+
+.insectlist {
+    padding: 50px;
+    margin: 70px;
+    height: 70%;
+    text-align: center;
+    overflow: auto;
+}
+
+.show {
+    padding: 20px;
+}

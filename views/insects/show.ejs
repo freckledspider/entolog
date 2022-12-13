@@ -3,10 +3,17 @@
     <%- include("../partials/head.ejs") %> 
 
 <body>
+    <style>
+        body {
+            overflow: auto;
+            text-align: center;
+        }
+        </style>
+    <div class="show">
     <%- include("../partials/header.ejs") %> 
     <main>
-        <h2><%= insect.genus %> <%= insect.species %></h2>
-        <img height="200px" src="<%= insect.image %>"><br><br>
+        <h4><%= insect.genus %> <%= insect.species %></h4>
+        <img height="400px" src="<%= insect.image %>"><br><br>
         Family: <%= insect.family %><br>
         Genus: <%= insect.genus %><br>
         Species: <%= insect.species %><br><br>
@@ -26,7 +33,7 @@
         </form>
         <p id="msg"></p>
     </main>
-
+</body>
 </body>
 
 </html>

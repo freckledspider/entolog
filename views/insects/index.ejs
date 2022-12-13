@@ -4,16 +4,39 @@
 
 <body>
 
+<img src="https://i.imgur.com/VbaYKKx.png" style="position: absolute; top: 40px; left: 260px; height: 300px;">
 
     <div class="container">
 
-        <div class="left"><a href="/insects/new"><button>Add Insect</button></a></div>
+        <div class="left">
+            <h2>Entolog</h2>
+            <nav>
+                <ul>
+                  <li><a href="/">Logout</a></li>
+                  <li><a href="/insects/new">Add Insect</a></li>
+                </ul>
+              </nav><br>
+              <img src="https://i.imgur.com/EAcJy5a.png" height="100px">
+              <h3>Resources</h3>
+              <nav>
+                <ul>
+                  <li><a href="https://bugguide.net/" target="_blank">BugGuide</a></li>
+                  <li><a href="https://extension.oregonstate.edu/sites/default/files/documents/9591/pinning-insects.pdf" target="_blank">Pin & Label Insects</a></li>
+                  <li><a href="https://www.inaturalist.org/" target="_blank">iNaturalist</a></li>
+                </ul>
+              </nav>
+        </div>
 
-        <div class="right"><% for (insect of insects) { %>
-            <img height="100px" src="<%= insect.image %>"><br>
-            <a href="/insects/<%= insect._id %>"><i><%=insect.genus %> <%= insect.species %></i></a><br><br>
-        <% } %> </div>
-
+        <div class="right">
+            <div class="insectlist">
+                    <% for (insect of insects) { %>
+                        <div class="insects">
+                        <img height="150px" src="<%= insect.image %>"><br>
+                        <a href="/insects/<%= insect._id %>"><button class="editbutton"><i><%=insect.genus %> <%= insect.species %></i></button></a>
+                    </div>
+                    <% } %>
+                </div>
+        </div>
       </div>
 </body>
 
