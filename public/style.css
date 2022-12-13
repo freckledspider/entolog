@@ -13,6 +13,14 @@ body {
     overflow: hidden;
 }
 
+.welcomeindex {
+    background-image: url("insectsillustration.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 .index {
     position: absolute;
     top: 50%;
@@ -215,3 +223,78 @@ input {
   ::-ms-input-placeholder { /* Microsoft Edge */
     color: #ebecdb;
   }
+
+/* Responsive styling */
+@media only screen and (max-width:800px) {
+    .welcomeindex {
+        background-size:cover;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    h4 {
+        font-size: 1.5em;
+    }
+
+    .index {
+        width: 100%;
+    }
+
+    .left {
+        width: auto;
+        height: 240px;
+        float:none;
+        padding: none;
+        margin: none;
+      }
+      .right {
+        width: auto;
+      }
+    
+    .insects {
+        margin: 40px;
+        padding: 50px;
+        height: 200px;
+        width: 50%;
+        display: block;
+        float: left;
+    }
+    
+    .insectlist {
+        padding: 0px;
+        margin: 0px;
+        text-align: center;
+        overflow: scroll;
+    }
+
+      li a {
+        padding: 1px;
+        font-size: 0.9em;
+        margin: 5px;
+      }
+      
+    .hideinmobile {
+        display:none;
+    }
+    
+    main {
+        width: auto;
+        margin: auto;
+        padding: 10px;
+    }
+
+    button, .inputbutton {
+        padding: 10px;
+        font-size: 1em;
+        margin: 10px;
+    }
+    .showimage {
+        width: 250px;
+    }
+} 
