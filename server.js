@@ -5,6 +5,8 @@ const morgan = require("morgan")
 const methodOverride = require("method-override")
 const mongoose = require("mongoose")
 const InsectRouter = require('./controllers/insect')
+const session = require("express-session")
+const MongoStore = require("connect-mongo")
 
 // create express application
 const app = express()
